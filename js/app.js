@@ -169,7 +169,20 @@ function moveItem(newArrey) {
       }
 };
 
+function mixArrey (e) {
+    e.preventDefault();
+    let Mix = Number.sort(function(){
+        return Math.random() - 0.5;
+      });
+    console.log(Mix);
+    moveItem(Number);
+    checkCollection(Number);
+
+}
+
 Box.addEventListener('click', chackClick);
+
+Btn.addEventListener('click', mixArrey)
 
 
 

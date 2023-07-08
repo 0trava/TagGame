@@ -13,6 +13,11 @@
 
 body {
     background: #212121;
+    /* background-image: url("https://pibig.info/uploads/posts/2022-11/1669685501_6-pibig-info-p-kosmicheskii-fon-dlya-prezentatsii-oboi-6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; */
+    /* opacity: 0.5; */
+
     display: flex;
     justify-content: center;
 
