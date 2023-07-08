@@ -15,6 +15,8 @@ body {
     background: #212121;
     display: flex;
     justify-content: center;
+
+    
 }
 
 
@@ -55,7 +57,25 @@ body {
     background-image: linear-gradient(#212121, #212121),  linear-gradient(137.48deg, #ffdb3b 10%,#FE53BB 45%, #8F51EA 67%, #0044ff 87%);
     background-origin: border-box;
     background-clip: content-box, border-box;
+
+    display: flex;
+    flex-wrap: wrap;
 }
+
+.box div {
+
+    width: calc(100% / 3);
+    height: calc(100% / 3);
+    background-color: #FFFFFF;
+    border: 1px solid;
+    border-radius: 1rem;
+
+
+}
+
+
+
+
 
 
 
