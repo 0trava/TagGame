@@ -4,7 +4,7 @@ const Btn = document.querySelector('.btn');
 console.log(Box);
 console.log(Btn);
 
-const Number = ['1', '2', '3','4','5','6','7','8',]
+const Number = ['1', '2', '3','4','5','6','7','8','empty']
 
 
 for ( var i of Number) {
@@ -16,6 +16,7 @@ for ( var i of Number) {
 
 function chackClick(e) {
     console.log(e.target);
+
 }
 
 Box.addEventListener('click', chackClick);
