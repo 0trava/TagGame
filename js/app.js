@@ -1,8 +1,7 @@
 const Box = document.querySelector(".box");
 const Btn = document.querySelector('.btn');
+const winBox = document.querySelector('.box_win');
 
-console.log(Box);
-console.log(Btn);
 
 let Number = ['1','2','3','4','5','6','7','8','empty']
 
@@ -146,7 +145,9 @@ for (let i = 0; i < 9; i++) {
     let test = i + 1;
    if (checkArrey[i] == test) {
         if (test == 8) {
-            console.log("win")
+            console.log("win");
+            winBox.classList.remove('hidden')
+
         }
    } else {
     i = 9;
@@ -170,6 +171,7 @@ function moveItem(newArrey) {
 };
 
 function mixArrey (e) {
+    winBox.classList.add('hidden')
     e.preventDefault();
     let Mix = Number.sort(function(){
         return Math.random() - 0.5;

@@ -50,6 +50,7 @@ body {
 }
 
 .box {
+
     margin-top: 5%;
     margin-bottom: 10%;
 
@@ -91,6 +92,41 @@ body {
     font-size: calc(var(--sizeindex) * 0.0) ;
 
 }
+
+/* WIN */
+.display_Box {
+    position: relative;
+
+}
+
+.box_win {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    top: 5%;
+    left: 0.5%;
+
+    height: 375px;
+    width: 375px;
+    background-color: var(--dark);
+    background-image: url("../public/win.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    animation: .5s show cubic-bezier(.7,0,.96,.63);
+
+
+
+}
+
+.hidden{
+    display: none;
+}
+
+@keyframes show {
+    from { scale: 0.3; }
+    to { opacity: 1; }
+  }
 
 
 
