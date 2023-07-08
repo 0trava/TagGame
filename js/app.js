@@ -11,5 +11,8 @@ for ( var i of Number) {
   let BoxItem = document.createElement('div');
   Box.appendChild(BoxItem);
   BoxItem.classList.add(i);
+  BoxItem.innerText = i
 }
+
+
 
