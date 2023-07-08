@@ -21,10 +21,18 @@ function chackClick(e) {
     let Index = Number.indexOf(clickItem);
     console.log(Index);
 
+    if (Number[Index - 1] === "empty") { Number[Index - 1] = clickItem; Number[Index] = "empty"}
+    if (Number[Index + 1] === "empty") { console.log("+1")}
+    if (Number[Index + 3] === "empty") { 
+        Number[Index + 3] = clickItem; 
+        Number[Index] = "empty";
+    }
+    if (Number[Index - 3] === "empty") { console.log("-3")}
+
     // Emam = ['1','2','empty','3','4','5','6','7','8'];
 
 
-    // moveItem(Emam);
+    moveItem(Number);
 
 }
 
