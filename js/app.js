@@ -14,5 +14,13 @@ for ( var i of Number) {
   BoxItem.innerText = i
 }
 
+function chackClick(e) {
+    console.log(e.target);
+}
+
+Box.addEventListener('click', chackClick);
+
+
+
 
 
