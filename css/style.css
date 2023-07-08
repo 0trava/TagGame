@@ -80,7 +80,7 @@ body {
 
 }
 
-.box .a {
+.box .empty {
     background: none;
     border: none;
     font-size: calc(var(--sizeindex) * 0.0) ;
