@@ -142,7 +142,35 @@ function chackClick(e) {
 
 
     moveItem(Number);
+    checkCollection(Number);
 
+}
+
+function checkCollection(checkArrey) {
+    if (checkArrey[0] === "1") {
+        if (checkArrey[1] === "2"){
+            if (checkArrey[2] === "3"){
+                if (checkArrey[3] === "4"){
+                    if (checkArrey[4] === "5"){
+                        if (checkArrey[5] === "6"){
+                            if (checkArrey[6] === "7"){
+                                if (checkArrey[7] === "8"){
+                                    console.log("win")
+                                }
+                                return;
+                            }
+                            return;
+                        }
+                        return;
+                    }
+                    return;
+                }
+                return;
+            }
+            return;
+        }
+        return;
+    }
 }
 
 
