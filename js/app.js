@@ -21,22 +21,122 @@ function chackClick(e) {
     let Index = Number.indexOf(clickItem);
     console.log(Index);
 
-    if (Number[Index - 1] === "empty") {
-         Number[Index - 1] = clickItem; 
-         Number[Index] = "empty"
-    }
-    if (Number[Index + 1] === "empty") { 
-        Number[Index + 1] = clickItem; 
-        Number[Index] = "empty"
-    }
-    if (Number[Index + 3] === "empty") { 
-        Number[Index + 3] = clickItem; 
-        Number[Index] = "empty";
-    }
-    if (Number[Index - 3] === "empty") {
-        Number[Index - 3] = clickItem; 
-        Number[Index] = "empty"
-    }
+ switch (Index) {
+    case 0:
+       if (Number[Index + 1] === "empty") { 
+           Number[Index + 1] = clickItem; 
+           Number[Index] = "empty"
+       }
+       if (Number[Index + 3] === "empty") { 
+           Number[Index + 3] = clickItem; 
+           Number[Index] = "empty";
+       }
+       break;
+    case 1:
+        if (Number[Index - 1] === "empty") {
+            Number[Index - 1] = clickItem; 
+            Number[Index] = "empty"
+       }
+       if (Number[Index + 1] === "empty") { 
+           Number[Index + 1] = clickItem; 
+           Number[Index] = "empty"
+       }
+       if (Number[Index + 3] === "empty") { 
+           Number[Index + 3] = clickItem; 
+           Number[Index] = "empty";
+       }
+       break;
+    case 2:
+        if (Number[Index - 1] === "empty") {
+            Number[Index - 1] = clickItem; 
+            Number[Index] = "empty"
+       }
+       if (Number[Index + 3] === "empty") { 
+           Number[Index + 3] = clickItem; 
+           Number[Index] = "empty";
+       }
+       break;
+    case 3:
+       if (Number[Index + 1] === "empty") { 
+           Number[Index + 1] = clickItem; 
+           Number[Index] = "empty"
+       }
+       if (Number[Index + 3] === "empty") { 
+           Number[Index + 3] = clickItem; 
+           Number[Index] = "empty";
+       }
+       if (Number[Index - 3] === "empty") {
+           Number[Index - 3] = clickItem; 
+           Number[Index] = "empty"
+       }
+       break;
+    case 4:
+        if (Number[Index - 1] === "empty") {
+            Number[Index - 1] = clickItem; 
+            Number[Index] = "empty"
+       }
+       if (Number[Index + 1] === "empty") { 
+           Number[Index + 1] = clickItem; 
+           Number[Index] = "empty"
+       }
+       if (Number[Index + 3] === "empty") { 
+           Number[Index + 3] = clickItem; 
+           Number[Index] = "empty";
+       }
+       if (Number[Index - 3] === "empty") {
+           Number[Index - 3] = clickItem; 
+           Number[Index] = "empty"
+       }
+       break;
+    case 5:
+        if (Number[Index - 1] === "empty") {
+            Number[Index - 1] = clickItem; 
+            Number[Index] = "empty"
+       }
+       if (Number[Index + 3] === "empty") { 
+           Number[Index + 3] = clickItem; 
+           Number[Index] = "empty";
+       }
+       if (Number[Index - 3] === "empty") {
+           Number[Index - 3] = clickItem; 
+           Number[Index] = "empty"
+       }
+       break;
+    case 6:
+       if (Number[Index + 1] === "empty") { 
+           Number[Index + 1] = clickItem; 
+           Number[Index] = "empty"
+       }
+       if (Number[Index - 3] === "empty") {
+           Number[Index - 3] = clickItem; 
+           Number[Index] = "empty"
+       }
+       break;
+    case 7:
+        if (Number[Index - 1] === "empty") {
+            Number[Index - 1] = clickItem; 
+            Number[Index] = "empty"
+       }
+       if (Number[Index + 1] === "empty") { 
+           Number[Index + 1] = clickItem; 
+           Number[Index] = "empty"
+       }
+       if (Number[Index - 3] === "empty") {
+           Number[Index - 3] = clickItem; 
+           Number[Index] = "empty"
+       }
+       break;
+    case 8:
+        if (Number[Index - 1] === "empty") {
+            Number[Index - 1] = clickItem; 
+            Number[Index] = "empty"
+       }
+       if (Number[Index - 3] === "empty") {
+           Number[Index - 3] = clickItem; 
+           Number[Index] = "empty"
+       }
+       break;
+ }
 
     // Emam = ['1','2','empty','3','4','5','6','7','8'];
 
