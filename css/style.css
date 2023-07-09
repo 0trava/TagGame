@@ -6,23 +6,48 @@
 
 
     :root {
-        --dark: #070707;
+        --dark: #020820;
         --sizeindex: calc(1vw + 1vh);
         --transition: .75s cubic-bezier(.2, .6, 0, 1);
     }
 
 body {
-    background: #070707;
-    /* background-image: url("https://pibig.info/uploads/posts/2022-11/1669685501_6-pibig-info-p-kosmicheskii-fon-dlya-prezentatsii-oboi-6.jpg");
+    background: var(--dark);
+    background-image: url("https://phonoteka.org/uploads/posts/2021-04/1618430232_17-phonoteka_org-p-kosmos-fon-multyashnii-19.jpg");
     background-repeat: no-repeat;
-    background-size: cover; */
+    background-size: cover;
     /* opacity: 0.5; */
 
     display: flex;
     justify-content: center;
 
+
     
 }
+
+.astronaut{
+    position: absolute;
+    right: 0%;
+    width: calc(var(--sizeindex) * 18.1) ;
+    height: calc(var(--sizeindex) * 18.1) ;
+    animation: astronaut 5s ease infinite;
+    transition: 0.5s;
+}
+
+
+@keyframes astronaut {
+    0% {
+      scale: 1.0;
+    }
+  
+    50% {
+        scale: 0.95;
+    }
+  
+    100% {
+        scale: 1.0;
+    }
+  }
 
 
 .section {
@@ -34,7 +59,6 @@ body {
 
     margin-top: calc(var(--sizeindex) * 2);
 
-    border: 1px solid;
 }
 
 
