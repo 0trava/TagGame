@@ -147,16 +147,17 @@ function chackClick(e) {
 
 function checkCollection(checkArrey) {
 
-for (let i = 0; i < 9; i++) {
+for (let i = 0; i < 15; i++) {
     let test = i + 1;
    if (checkArrey[i] == test) {
         if (test == 14) {
             console.log("win");
-            winBox.classList.remove('hidden')
+            winBox.classList.remove('hidden');
+            Box.classList.add('hidden');
 
         }
    } else {
-    i = 9;
+    i = 15;
    }
 }
 }
@@ -177,7 +178,8 @@ function moveItem(newArrey) {
 };
 
 function mixArrey (e) {
-    winBox.classList.add('hidden')
+    winBox.classList.add('hidden');
+    Box.classList.remove('hidden');
     e.preventDefault();
     let Mix = Number.sort(function(){
         return Math.random() - 0.5;

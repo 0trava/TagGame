@@ -134,24 +134,35 @@ body {
 }
 
 .box_win {
-    content: "";
-    position: absolute;
+    /* content: "";
+    position: absolute; */
     z-index: 5;
-    top: 5%;
-    left: 0.5%;
+    top: 0;
+    left: 0;
 
-    height: 375px;
-    width: 375px;
-    background-color: var(--dark);
-    background-image: url("../public/win.jpg");
+    height: 30rem;
+    width: 30rem;
+    /* background-color: var(--dark); */
+    background-image: url("../public/win.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    animation: .5s show cubic-bezier(.7,0,.96,.63);
+    animation: box_win 2s ease;
+    transition: 0.5s;
+  }
+  
+  
+  @keyframes box_win {
+      0% {
+       scale: 0.5;
+       transform: translateX(-80%);
+      }
 
-
-
-}
+      100% {
+        scale: 1;
+        transform: translateX(0%);
+      }
+    }
 
 .hidden{
     display: none;
