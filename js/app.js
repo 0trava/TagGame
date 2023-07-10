@@ -3,7 +3,8 @@ const Btn = document.querySelector('.btn');
 const winBox = document.querySelector('.box_win');
 
 
-let Number = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','empty']
+let Number = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','empty'];
+let Tagle = true;
 
 function Tagle_number(List){
     for ( var i of List) {
@@ -27,7 +28,12 @@ function Tagle_img(List){
       }
 }
 
-Tagle_img(Number);
+if (Tagle){
+    Tagle_img(Number);
+} else {
+    Tagle_number(Number);
+}
+
 
 
 
@@ -187,7 +193,12 @@ function moveItem(newArrey) {
         Box.removeChild(BoxItem[0]);
       }
     
-    Tagle_img(newArrey);
+
+    if (Tagle){
+        Tagle_img(newArrey);
+    } else {
+        Tagle_number(newArrey);
+    }
 };
 
 function mixArrey (e) {
