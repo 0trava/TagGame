@@ -284,8 +284,8 @@ body {
     top: 0;
     left: 0;
 
-    height: 30rem;
-    width: 30rem;
+    height: 28rem;
+    width: 28rem;
     /* background-color: var(--dark); */
     background-image: url("../public/win.png");
     background-repeat: no-repeat;
