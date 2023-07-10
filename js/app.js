@@ -5,7 +5,7 @@ const label = document.querySelector('#color_mode');
 const hours = document.querySelector('.timer__hours');
 const minutes = document.querySelector('.timer__minutes');
 const seconds = document.querySelector('.timer__seconds');
-
+const alien = document.querySelector('.alien');
 
 let Number = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','empty'];
 let Tagle = false;
@@ -186,17 +186,24 @@ function chackClick(e) {
 
 function checkCollection(checkArrey) {
 let win = 0;
+
 for (let i = 0; i < 15; i++) {
-    let test = i + 1;
-    
+    let test = i + 1;  
 
    if (checkArrey[i] == test) {
         win = win + 1;
-        console.log(win);
+        if (win > 6) {
+            alien.classList.remove('hidden');
+        } 
+
+
+
         if (win > 14) {
             console.log("win");
+            alien.classList.add('hidden');
             winBox.classList.remove('hidden');
             Box.classList.add('hidden');
+
         }
    } else {
     i = 16;
@@ -223,6 +230,7 @@ function moveItem(Number) {
 function mixArrey (e) {
     winBox.classList.add('hidden');
     Box.classList.remove('hidden');
+    alien.classList.add('hidden');
     e.preventDefault();
     let Mix = Number.sort(function(){
         return Math.random() - 0.5;

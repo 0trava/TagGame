@@ -35,6 +35,19 @@ body {
     transition: 0.5s;
 }
 
+.alien{
+  position: absolute;
+
+  z-index: 1;
+  right: 50%;
+  top: calc(var(--sizeindex) * -7.3);
+  transform: translateX(50%);
+  width: calc(var(--sizeindex) * 9) ;
+  height: calc(var(--sizeindex) * 9) ;
+  animation: alien 5s ease infinite;
+  transition: 0.5s;
+}
+
 .planet{
   position: absolute;
   bottom: 5rem;
@@ -59,6 +72,22 @@ body {
         scale: 1.0;
     }
   }
+
+@keyframes alien {
+    0% {
+      scale: 1.0;
+    }
+  
+    50% {
+        scale: 0.98;
+    }
+  
+    100% {
+        scale: 1.0;
+    }
+  }
+
+  
 
 
 .section {
