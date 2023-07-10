@@ -2,14 +2,14 @@ const Box = document.querySelector(".box");
 const Btn = document.querySelector('.btn');
 const winBox = document.querySelector('.box_win');
 const label = document.querySelector('#color_mode');
-const time = document.querySelector('.time');
+const timer__hours = document.querySelector('.timer__hours');
+const timer__minutes = document.querySelector('.timer__hours');
+const timer__seconds = document.querySelector('.timer__hours');
+
 
 let Number = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','empty'];
 let Tagle = false;
-
-
-label.addEventListener('click', changeTagle);
-
+let Timer = ["00", "00", "00"];
 
 
 function changeTagle(e) {
@@ -24,7 +24,7 @@ function Tagle_number(List){
         let BoxItem = document.createElement('div');
         Box.appendChild(BoxItem);
         BoxItem.classList.add(i);
-        BoxItem.innerText = i
+        BoxItem.innerText = i;
       
       }
 }
@@ -186,8 +186,6 @@ for (let i = 0; i < 15; i++) {
     let test = i + 1;
 
    if (checkArrey[i] == test) {
-        console.log(checkArrey[i]);
-        console.log(test);
         if (test === 15 || checkArrey[15] === "empty") {
             console.log("win");
             winBox.classList.remove('hidden');
@@ -225,12 +223,26 @@ function mixArrey (e) {
     console.log(Mix);
     moveItem(Number);
     checkCollection(Number);
+    TimerStart(["00", "10", "00"]);
+
+}
+
+
+function TimerStart(time){
+Timer = time;
+console.log(Timer);
+console.log(timer__minutes);
+
+timer__hours.innerText = Timer[0];
+timer__minutes.innerText = Timer[1];
+timer__seconds.innerText = Timer[2];
+
 
 }
 
 Box.addEventListener('click', chackClick);
-
-Btn.addEventListener('click', mixArrey)
+Btn.addEventListener('click', mixArrey);
+label.addEventListener('click', changeTagle);
 
 
 
