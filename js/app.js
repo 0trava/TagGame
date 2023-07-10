@@ -192,9 +192,11 @@ for (let i = 0; i < 15; i++) {
 
    if (checkArrey[i] == test) {
         win = win + 1;
-        if (win > 6) {
+        if (win > 7) {
             alien.classList.remove('hidden');
-        } 
+        } else {
+            alien.classList.add('hidden');
+        }
 
 
 

@@ -48,6 +48,11 @@ body {
   transition: 0.5s;
 }
 
+.alien:hover {
+  opacity: 0.6;
+
+}
+
 .planet{
   position: absolute;
   bottom: 5rem;
@@ -75,15 +80,16 @@ body {
 
 @keyframes alien {
     0% {
-      scale: 1.0;
+      scale: 1;
     }
-  
+
     50% {
-        scale: 0.98;
+      scale: 0.98;
     }
+
   
     100% {
-        scale: 1.0;
+        scale: 1;
     }
   }
 
