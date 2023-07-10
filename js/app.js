@@ -184,7 +184,7 @@ function checkCollection(checkArrey) {
 for (let i = 0; i < 15; i++) {
     let test = i + 1;
    if (checkArrey[i] == test) {
-        if (test == 14) {
+        if (test == 15) {
             console.log("win");
             winBox.classList.remove('hidden');
             Box.classList.add('hidden');
