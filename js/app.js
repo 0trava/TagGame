@@ -5,24 +5,30 @@ const winBox = document.querySelector('.box_win');
 
 let Number = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','empty']
 
+function Tagle_number(List){
+    for ( var i of List) {
+        let BoxItem = document.createElement('div');
+        Box.appendChild(BoxItem);
+        BoxItem.classList.add(i);
+        BoxItem.innerText = i
+      
+      }
+}
 
-// for ( var i of Number) {
-//   let BoxItem = document.createElement('div');
-//   Box.appendChild(BoxItem);
-//   BoxItem.classList.add(i);
-//   BoxItem.innerText = i
-
-// }
 
 
-for ( var i of Number) {
-    let BoxItem = document.createElement("img");
-    BoxItem.src = `./public/image_for_game/image_part_${i}.jpg`;
-    Box.appendChild(BoxItem);
-    BoxItem.classList.add(i);
-    BoxItem.innerText = i;
-    
-  }
+function Tagle_img(List){
+    for ( var i of List) {
+        let BoxItem = document.createElement("img");
+        BoxItem.src = `./public/image_for_game/image_part_${i}.jpg`;
+        Box.appendChild(BoxItem);
+        BoxItem.classList.add(i);
+        BoxItem.innerText = i;
+      }
+}
+
+Tagle_img(Number);
+
 
 
 function chackClick(e) {
@@ -181,12 +187,7 @@ function moveItem(newArrey) {
         Box.removeChild(BoxItem[0]);
       }
     
-      for ( var i of newArrey) {
-        let BoxItem = document.createElement('div');
-        Box.appendChild(BoxItem);
-        BoxItem.classList.add(i);
-        BoxItem.innerText = i
-      }
+    Tagle_img(newArrey);
 };
 
 function mixArrey (e) {
