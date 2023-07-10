@@ -2,6 +2,7 @@ const Box = document.querySelector(".box");
 const Btn = document.querySelector('.btn');
 const winBox = document.querySelector('.box_win');
 const label = document.querySelector('#color_mode');
+const time = document.querySelector('.time');
 
 let Number = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','empty'];
 let Tagle = false;
@@ -183,8 +184,11 @@ function checkCollection(checkArrey) {
 
 for (let i = 0; i < 15; i++) {
     let test = i + 1;
+
    if (checkArrey[i] == test) {
-        if (test == 15) {
+        console.log(checkArrey[i]);
+        console.log(test);
+        if (test === 15 || checkArrey[15] === "empty") {
             console.log("win");
             winBox.classList.remove('hidden');
             Box.classList.add('hidden');
