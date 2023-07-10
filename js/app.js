@@ -1,10 +1,26 @@
 const Box = document.querySelector(".box");
 const Btn = document.querySelector('.btn');
 const winBox = document.querySelector('.box_win');
-
+const label = document.querySelector('#color_mode');
 
 let Number = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','empty'];
-let Tagle = true;
+let Tagle = false;
+
+
+
+
+
+label.addEventListener('click', changeTagle);
+
+
+
+function changeTagle(e) {
+    console.log(e.target.checked);
+    Tagle  = e.target.checked;
+
+    
+}
+
 
 function Tagle_number(List){
     for ( var i of List) {
@@ -15,8 +31,6 @@ function Tagle_number(List){
       
       }
 }
-
-
 
 function Tagle_img(List){
     for ( var i of List) {
