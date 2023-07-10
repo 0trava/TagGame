@@ -521,6 +521,7 @@ body {
     padding-bottom: 1px;
     text-align: center;
   }
+  
   .timer__item::before {
     content: attr(data-title);
     display: block;

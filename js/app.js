@@ -2,14 +2,18 @@ const Box = document.querySelector(".box");
 const Btn = document.querySelector('.btn');
 const winBox = document.querySelector('.box_win');
 const label = document.querySelector('#color_mode');
-const timer__hours = document.querySelector('.timer__hours');
-const timer__minutes = document.querySelector('.timer__hours');
-const timer__seconds = document.querySelector('.timer__hours');
+const hours = document.querySelector('.timer__hours');
+const minutes = document.querySelector('.timer__minutes');
+const seconds = document.querySelector('.timer__seconds');
 
 
 let Number = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','empty'];
 let Tagle = false;
 let Timer = ["00", "00", "00"];
+let hour = "00";
+let minute = "00";
+let second = "";
+let t;
 
 
 function changeTagle(e) {
@@ -181,19 +185,22 @@ function chackClick(e) {
 }
 
 function checkCollection(checkArrey) {
-
+let win = 0;
 for (let i = 0; i < 15; i++) {
     let test = i + 1;
+    
 
    if (checkArrey[i] == test) {
-        if (test === 15 || checkArrey[15] === "empty") {
+        win = win + 1;
+        console.log(win);
+        if (win > 14) {
             console.log("win");
             winBox.classList.remove('hidden');
             Box.classList.add('hidden');
-
         }
    } else {
     i = 16;
+    win = 0;
    }
 }
 }
@@ -220,22 +227,49 @@ function mixArrey (e) {
     let Mix = Number.sort(function(){
         return Math.random() - 0.5;
       });
-    console.log(Mix);
     moveItem(Number);
     checkCollection(Number);
-    TimerStart(["00", "10", "00"]);
+    TimerStart(["00", "00", "00"]);
 
+}
+
+
+function timer() {
+    t = setTimeout(add, 1000);
+}
+
+function add() {
+    tick();
+    if (second < 10) { second = `0${second}`;};
+
+    Timer = [hour, minute, second];
+
+    
+    hours.innerText = Timer[0];
+    minutes.innerText = Timer[1];
+    seconds.innerText = Timer[2];
+    timer();
+};
+
+function tick(){
+    second++;
+    if (second >= 60) {
+        second = 0;
+        minute++;
+        if (minute >= 60) {
+            minute = 0;
+            hour++;
+        }
+    }
 }
 
 
 function TimerStart(time){
 Timer = time;
 console.log(Timer);
-console.log(timer__minutes);
 
-timer__hours.innerText = Timer[0];
-timer__minutes.innerText = Timer[1];
-timer__seconds.innerText = Timer[2];
+add()
+
 
 
 }
