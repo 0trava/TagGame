@@ -35,10 +35,10 @@ body {
     transition: 0.5s;
 }
 
-.alien{
+.alien, .alien_like {
   position: absolute;
 
-  z-index: 1;
+  z-index: 0;
   right: 50%;
   top: calc(var(--sizeindex) * -7.3);
   transform: translateX(50%);
@@ -48,7 +48,7 @@ body {
   transition: 0.5s;
 }
 
-.alien:hover {
+.alien:hover, .alien_like:hover {
   opacity: 0.6;
 
 }
@@ -110,7 +110,7 @@ body {
 
 .title {
     margin-top: 5%;
-    
+    z-index: -1;
     display: block;
     font-size: 5rem ;
     background: linear-gradient(45deg, DarkMagenta, Tomato, Violet);
@@ -120,7 +120,7 @@ body {
 }
 
 .box {
-
+    z-index: 5;
     margin-top: 5%;
     margin-bottom: 10%;
 
@@ -139,7 +139,7 @@ body {
 }
 
 .box div {
-
+    z-index: 5;
     width: calc(100% / 4);
     height: calc(100% / 4);
     background-color: #FFFFFF;

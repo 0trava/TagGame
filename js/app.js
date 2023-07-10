@@ -6,6 +6,7 @@ const hours = document.querySelector('.timer__hours');
 const minutes = document.querySelector('.timer__minutes');
 const seconds = document.querySelector('.timer__seconds');
 const alien = document.querySelector('.alien');
+const alien_like = document.querySelector('.alien_like');
 
 let Number = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','empty'];
 let Tagle = false;
@@ -194,8 +195,13 @@ for (let i = 0; i < 15; i++) {
         win = win + 1;
         if (win > 7) {
             alien.classList.remove('hidden');
+            if (win > 11) {
+                alien.classList.add('hidden');
+                alien_like.classList.remove('hidden');
+            }
         } else {
             alien.classList.add('hidden');
+            alien_like.classList.add('hidden');
         }
 
 
@@ -205,6 +211,7 @@ for (let i = 0; i < 15; i++) {
             alien.classList.add('hidden');
             winBox.classList.remove('hidden');
             Box.classList.add('hidden');
+            alien_like.classList.add('hidden');
 
         }
    } else {
