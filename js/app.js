@@ -17,8 +17,8 @@ label.addEventListener('click', changeTagle);
 function changeTagle(e) {
     console.log(e.target.checked);
     Tagle  = e.target.checked;
-
-    
+    moveItem(Number);
+ 
 }
 
 
@@ -201,7 +201,7 @@ for (let i = 0; i < 15; i++) {
 }
 
 
-function moveItem(newArrey) {
+function moveItem(Number) {
     for ( var i of Number) {
         let BoxItem = document.getElementsByClassName(i);
         Box.removeChild(BoxItem[0]);
@@ -209,9 +209,9 @@ function moveItem(newArrey) {
     
 
     if (Tagle){
-        Tagle_img(newArrey);
+        Tagle_img(Number);
     } else {
-        Tagle_number(newArrey);
+        Tagle_number(Number);
     }
 };
 
