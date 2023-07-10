@@ -6,12 +6,24 @@ const winBox = document.querySelector('.box_win');
 let Number = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','empty']
 
 
+// for ( var i of Number) {
+//   let BoxItem = document.createElement('div');
+//   Box.appendChild(BoxItem);
+//   BoxItem.classList.add(i);
+//   BoxItem.innerText = i
+
+// }
+
+
 for ( var i of Number) {
-  let BoxItem = document.createElement('div');
-  Box.appendChild(BoxItem);
-  BoxItem.classList.add(i);
-  BoxItem.innerText = i
-}
+    let BoxItem = document.createElement("img");
+    BoxItem.src = `./public/image_for_game/image_part_${i}.jpg`;
+    Box.appendChild(BoxItem);
+    BoxItem.classList.add(i);
+    BoxItem.innerText = i;
+    
+  }
+
 
 function chackClick(e) {
     const clickItem = e.target.classList[0];

@@ -120,6 +120,24 @@ body {
 
 }
 
+.box img {
+
+  width: calc(100% / 4);
+  height: calc(100% / 4);
+  background-color: #FFFFFF;
+  border: 1px solid;
+  border-radius: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: calc(var(--sizeindex) * 2.0) ;
+
+  cursor: pointer;
+
+}
+
 .box .empty {
     background: none;
     border: none;
