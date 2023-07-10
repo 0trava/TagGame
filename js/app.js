@@ -7,15 +7,11 @@ let Number = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15',
 let Tagle = false;
 
 
-
-
-
 label.addEventListener('click', changeTagle);
 
 
 
 function changeTagle(e) {
-    console.log(e.target.checked);
     Tagle  = e.target.checked;
     moveItem(Number);
  
