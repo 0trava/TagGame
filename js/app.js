@@ -17,7 +17,6 @@ function chackClick(e) {
     const clickItem = e.target.classList[0];
     
     let Index = Number.indexOf(clickItem);
-    console.log(Index);
  switch (Index) {
     case 0:
        if (Number[Index + 1] === "empty") { 

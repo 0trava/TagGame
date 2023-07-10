@@ -13,7 +13,7 @@
 
 body {
     background: var(--dark);
-    background-image: url("https://phonoteka.org/uploads/posts/2021-04/1618430232_17-phonoteka_org-p-kosmos-fon-multyashnii-19.jpg");
+    background-image: url("../public/fon.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     /* opacity: 0.5; */
@@ -32,6 +32,16 @@ body {
     height: calc(var(--sizeindex) * 18.1) ;
     animation: astronaut 5s ease infinite;
     transition: 0.5s;
+}
+
+.planet{
+  position: absolute;
+  bottom: 5rem;
+  left: 15rem;
+  width: calc(var(--sizeindex) * 12.1) ;
+  height: calc(var(--sizeindex) * 12.1) ;
+  animation: astronaut 5s ease infinite;
+  transition: 0.5s;
 }
 
 
@@ -163,8 +173,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 13rem;
-    height: 3rem;
+    width: 15rem;
+    height: 5rem;
     background-size: 300% 300%;
     backdrop-filter: blur(1rem);
     border-radius: 5rem;
@@ -192,7 +202,7 @@ body {
   strong {
     z-index: 2;
     font-family: 'Avalors Personal Use';
-    font-size: 12px;
+    font-size: 16px;
     letter-spacing: 5px;
     color: #FFFFFF;
     text-shadow: 0 0 4px white;
