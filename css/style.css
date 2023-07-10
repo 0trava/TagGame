@@ -94,8 +94,8 @@ body {
 
 .box div {
 
-    width: calc(100% / 3);
-    height: calc(100% / 3);
+    width: calc(100% / 4);
+    height: calc(100% / 4);
     background-color: #FFFFFF;
     border: 1px solid;
     border-radius: 1rem;
