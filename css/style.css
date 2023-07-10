@@ -6,7 +6,7 @@
 
 
     :root {
-        --dark: #020820;
+        --dark: #212121;
         --sizeindex: calc(1vw + 1vh);
         --transition: .75s cubic-bezier(.2, .6, 0, 1);
     }
@@ -126,6 +126,130 @@ body {
     font-size: calc(var(--sizeindex) * 0.0) ;
 
 }
+
+.info_menu{
+  height: 80px;
+  width: 380px;
+  backdrop-filter: blur(10px);
+  margin-bottom: 30px;
+  display: flex;
+  gap: 30px;
+
+}
+
+.time {
+  width: 180px;
+  height: 60px;
+  background-color: var(--dark);
+  border-radius: 1rem;
+  border: double 4px transparent;
+  background-image: linear-gradient(#212121, #212121),  linear-gradient(137.48deg, #ffdb3b 10%,#FE53BB 45%, #8F51EA 67%, #0044ff 87%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+
+
+}
+
+
+/* Toggle_switches */
+.toggle_switches {
+
+}
+
+.btn-container {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+
+  border-radius: 1rem;
+  border: double 4px transparent;
+  background-image: linear-gradient(#212121, #212121),  linear-gradient(137.48deg, #ffdb3b 10%,#FE53BB 45%, #8F51EA 67%, #0044ff 87%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.btn-color-mode-switch {
+  display: inline-block;
+  margin: 0px;
+  position: relative;
+}
+
+.btn-color-mode-switch > label.btn-color-mode-switch-inner {
+  margin: 0px;
+  width: 160px;
+  height: 50px;
+  background-color: var(--dark);
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+    /*box-shadow: 0px 0px 8px 0px rgba(17, 17, 17, 0.34) inset;*/
+  display: block;
+}
+
+.btn-color-mode-switch > label.btn-color-mode-switch-inner:before {
+  content: attr(data-on);
+  position: absolute;
+  font-size: 20px;
+  font-weight: 600;
+  top: 6px;
+  right: 6px;
+  color: #222;
+}
+
+.btn-color-mode-switch > label.btn-color-mode-switch-inner:after {
+  content: attr(data-off);
+  width: 80px;
+  height: 30px;
+  background: #fff;
+  border-radius: 1rem;
+  position: absolute;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  left: 6px;
+  right: 6px;
+  top: 6px;
+  text-align: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 6px -2px --dark;
+  padding: 5px 0px;
+  color: #222;
+  font-weight: 600;
+}
+
+.btn-color-mode-switch input[type="checkbox"] {
+  cursor: pointer;
+  width: 50px;
+  height: 30px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  margin: 0px;
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner {
+  background-color: var(--dark);
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:after {
+  content: attr(data-on);
+  left: 68px;
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:before {
+  content: attr(data-off);
+  right: auto;
+  left: 30px;
+}
+
+
+
+
+
+
 
 /* WIN */
 .display_Box {
