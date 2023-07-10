@@ -27,6 +27,7 @@ body {
 
 .astronaut{
     position: absolute;
+    z-index: -1;
     right: 0%;
     width: calc(var(--sizeindex) * 18.1) ;
     height: calc(var(--sizeindex) * 18.1) ;
@@ -76,7 +77,7 @@ body {
     margin-top: 5%;
     
     display: block;
-    font-size: calc(var(--sizeindex) * 2.1) ;
+    font-size: 5rem ;
     background: linear-gradient(45deg, DarkMagenta, Tomato, Violet);
     /* Gradient for text */
     -webkit-background-clip: text;
