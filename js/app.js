@@ -15,6 +15,7 @@ let hour = "00";
 let minute = "00";
 let second = "00";
 let t;
+let win = 0;
 
 
 function changeTagle(e) {
@@ -186,7 +187,7 @@ function chackClick(e) {
 }
 
 function checkCollection(checkArrey) {
-let win = 0;
+
 
 for (let i = 0; i < 15; i++) {
     let test = i + 1;  
@@ -195,24 +196,21 @@ for (let i = 0; i < 15; i++) {
         win = win + 1;
         if (win > 7) {
             alien.classList.remove('hidden');
-            if (win > 11) {
-                alien.classList.add('hidden');
-                alien_like.classList.remove('hidden');
-            }
         } else {
             alien.classList.add('hidden');
             alien_like.classList.add('hidden');
         }
 
-
+        if (win > 11) {
+            alien.classList.add('hidden');
+            alien_like.classList.remove('hidden');
+        }
 
         if (win > 14) {
-            console.log("win");
             alien.classList.add('hidden');
-            winBox.classList.remove('hidden');
             Box.classList.add('hidden');
             alien_like.classList.add('hidden');
-
+            winBox.classList.remove('hidden');
         }
    } else {
     i = 16;
@@ -237,38 +235,29 @@ function moveItem(Number) {
 };
 
 function mixArrey (e) {
+    e.preventDefault();
+
     winBox.classList.add('hidden');
     Box.classList.remove('hidden');
     alien.classList.add('hidden');
-    e.preventDefault();
+
     let Mix = Number.sort(function(){
         return Math.random() - 0.5;
       });
-    moveItem(Number);
-    checkCollection(Number);
-    TimerStart(["00", "00", "00"]);
+
+    checkCollection(Mix);  
+    moveItem(Mix);
+    TimerStart();   
+
+
 
 }
 
 
 function timer() {
-    t = setTimeout(add, 1000);
+    t = setTimeout(TimerStart, 1000);
 }
 
-function add() {
-    tick();
-    if (second < 10) { second = `0${second}`;};
-    if (minute >= 1 && minute > Timer[1]){ minute = `0${minute}`;};
-    if (hour >= 1 && hour > Timer[0]){ hour = `0${hour}`;};
-
-    Timer = [hour, minute, second];
-
-    
-    hours.innerText = Timer[0];
-    minutes.innerText = Timer[1];
-    seconds.innerText = Timer[2];
-    timer();
-};
 
 function tick(){
     second++;
@@ -283,14 +272,18 @@ function tick(){
 }
 
 
-function TimerStart(time){
-Timer = time;
-console.log(Timer);
+function TimerStart(){
+    tick();
+    if (second < 10) { second = `0${second}`;};
+    if (minute >= 1 && minute > Timer[1]){ minute = `0${minute}`;};
+    if (hour >= 1 && hour > Timer[0]){ hour = `0${hour}`;};
 
-add()
+    Timer = [hour, minute, second];
 
-
-
+    hours.innerText = Timer[0];
+    minutes.innerText = Timer[1];
+    seconds.innerText = Timer[2];
+    timer();
 }
 
 Box.addEventListener('click', chackClick);
