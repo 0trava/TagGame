@@ -188,11 +188,9 @@ function chackClick(e) {
 
 function checkCollection(checkArrey) {
 
-
 for (let i = 0; i < 15; i++) {
-    let test = i + 1;  
 
-   if (checkArrey[i] == test) {
+   if (checkArrey[i] == i + 1) {
         win = win + 1;
         if (win > 7) {
             alien.classList.remove('hidden');
