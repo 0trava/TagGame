@@ -13,7 +13,7 @@ let Tagle = false;
 let Timer = ["00", "00", "00"];
 let hour = "00";
 let minute = "00";
-let second = "";
+let second = "00";
 let t;
 
 
@@ -258,6 +258,8 @@ function timer() {
 function add() {
     tick();
     if (second < 10) { second = `0${second}`;};
+    if (minute >= 1 && minute > Timer[1]){ minute = `0${minute}`;};
+    if (hour >= 1 && hour > Timer[0]){ hour = `0${hour}`;};
 
     Timer = [hour, minute, second];
 
