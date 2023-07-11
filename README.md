@@ -1,4 +1,4 @@
-# Gallows_game
+# TagGame
 
 PET-PROJECT -  practical work on creating a popular childhood game tag
 
