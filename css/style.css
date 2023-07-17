@@ -31,7 +31,7 @@ body {
     right: 0%;
     width: calc(var(--sizeindex) * 18.1) ;
     height: calc(var(--sizeindex) * 18.1) ;
-    animation: astronaut 5s ease infinite;
+    animation: updown 3s linear infinite;
     transition: 0.5s;
 }
 
@@ -59,23 +59,35 @@ body {
   left: 15rem;
   width: calc(var(--sizeindex) * 12.1) ;
   height: calc(var(--sizeindex) * 12.1) ;
-  animation: astronaut 5s ease infinite;
+  animation: planet 5s linear infinite;
   transition: 0.5s;
 }
 
+@keyframes updown {
+  0% {
+      transform: translateY(-20px);
+  }
+  50% {
+      transform: translateY(20px);
+  }
+  100% {
+      transform: translateY(-20px);
+  }
+}
 
-@keyframes astronaut {
-    0% {
-      scale: 1.0;
-    }
-  
-    50% {
-        scale: 0.95;
-    }
-  
-    100% {
-        scale: 1.0;
-    }
+@keyframes planet {
+  0% {
+
+    transform: translateX(-20px);
+}
+50% {
+
+    transform: translateX(40px);
+}
+100% {
+
+    transform: translateX(-20px);
+}
   }
 
 @keyframes alien {
